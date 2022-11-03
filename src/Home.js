@@ -8,7 +8,7 @@ function Home() {
         <div className='home'>
             <h1>All Posts!</h1>
             {error && <div>{error}</div>}
-            {isPending && <img src={process.env.PUBLIC_URL+'/loading.gif'}/>}
+            {isPending && <img alt='loading...' src={process.env.PUBLIC_URL+'/loading.gif'}/>}
             {blogs && <BlogList blogs={blogs} />}
         </div>
      );
