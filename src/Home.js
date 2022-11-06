@@ -5,7 +5,7 @@ import useFetch from './useFetch';
 function Home() {
     const {data:blogs,isPending,error} = useFetch('http://localhost:8000/posts');
     return ( 
-        <div className='home'>
+        <div className='center'>
             <h1>All Posts!</h1>
             {error && <div>{error}</div>}
             {isPending && <img alt='loading...' src={process.env.PUBLIC_URL+'/loading.gif'}/>}
