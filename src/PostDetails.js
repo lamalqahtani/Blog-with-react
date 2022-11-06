@@ -1,8 +1,9 @@
+import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const PostDetails = () => {
-    const {data,isPending,error} = useFetch('http://localhost:8000/posts/1');
-    console.log(data);
+    const {id} = useParams();
+    const {data,isPending,error} = useFetch(`http://localhost:8000/posts/${id}`);
     return ( 
     <>
         <h2>Hello from post details</h2>
