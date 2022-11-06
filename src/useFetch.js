@@ -4,11 +4,12 @@ const useFetch = (url)=>{
     const [data,setData] = useState(null);
     const [isPending,setIsPending] = useState(true);
     const [error,setError] = useState(null);
+    const aborting = new AbortController();
 
     useEffect(()=>{
         setTimeout(() => {
             
-            fetch(url)
+            fetch(url,{signal:aborting.signal})
             .then(res=>{
                 if(!res.ok){
                     throw Error("Can not read response object.");
@@ -21,11 +22,17 @@ const useFetch = (url)=>{
                 setError(null);
             })
             .catch(err=>{
-                setIsPending(false);
-                setError(err.message);
-                console.log(err.message);
+                if(err.name !== 'AbortError'){
+                    setIsPending(false);
+                    setError(err.message);
+                    console.log(err.name);
+                    console.log(err.message);
+                }
             });
         }, 2000);
+
+        return ()=> aborting.abort();
+
         },[url]);
         
     return {data,isPending,error}
