@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
     const [title, setTitle] = useState(null);
     const [description, setDescription] = useState(null);
     const [author, setAuthor] = useState('user 1');
+    const navigate = useNavigate();
     const handleSubmit = (e)=>{
         e.preventDefault();
         const data ={
@@ -16,9 +18,15 @@ const Create = () => {
             method: 'POST',
             headers:{'content-Type': 'application/json'},
             body: JSON.stringify(data)
-        }).then(res=> res.json())
-        .then(data=>console.log(data))
-        .catch(err=>console.log(err));
+        })
+        .then(res=> res.json())
+        .then(data=>{
+            console.log(data);
+            navigate('/');
+        })
+        .catch(err=>{
+            console.log(err);
+        });
     }
     return ( 
         <div className="center">

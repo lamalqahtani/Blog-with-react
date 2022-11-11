@@ -7,10 +7,11 @@ nav{
   margin-bottom: 15px;
   padding: 10px;
 }
-
-nav a{
+a{
   text-decoration: none;
   color: black;
+}
+nav a{
   font-size: 1.3rem;
 }
 
@@ -25,6 +26,9 @@ nav a:hover{
   border: 1px solid gray;
   border-radius: 7px;
 }
+.posts{
+  align-self: stretch;
+}
 
 .post:hover{
   /* border-color: pink; */
@@ -33,10 +37,44 @@ nav a:hover{
 }
 
 .center{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  /* text-align: center; */
 }
 
 h1{
   /* color: pink; */
   text-shadow: 1px 1px 5px pink;
+}
+button{
+  border: 2px solid black;
+  background-color: pink;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#loading{
+  width: 80px;
+  height: 80px;
+}
+
+.form{
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10%;
+}
+.form label,.form input,.form button,.form textarea, .form select{
+  padding: 15px;
+  margin: 10px;
+}
+
+.form label{
+  padding: 0px;
+  margin-bottom: 0px;
+}
+.form button{
+  align-self: center;
+  padding: 10px;
 }
