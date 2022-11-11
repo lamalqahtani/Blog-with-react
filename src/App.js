@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import About from './About';
 import Contact from './Contact';
 import PostDetails from './PostDetails';
+import Create from './Create';
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
             <Route path='/about' element={<About/>} />
             <Route path='/contact' element={<Contact/>} />
             <Route path='/post/details/:id' element={<PostDetails/>} />
+            <Route path='/post/create' element={<Create/>} />
           </Routes>
         </div>
       </div>
