@@ -10,7 +10,7 @@ function Home() {
             <h1>All Posts!</h1>
             <button><Link to='/post/create'> New Post</Link></button>
             {error && <div>{error}</div>}
-            {isPending && <img id='loading' alt='loading...' src={process.env.PUBLIC_URL+'/loading.gif'}/>}
+            {isPending && <img className='loading' alt='loading...' src={process.env.PUBLIC_URL+'/loading.gif'}/>}
             {blogs && <BlogList blogs={blogs} />}
         </div>
      );
