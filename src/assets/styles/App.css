@@ -89,6 +89,7 @@ button{
   width: 100%;
   height: 470px;
   overflow: hidden;
+  background-color: #FFD2D2;
 }
 
 #hero-text{
@@ -112,7 +113,7 @@ button{
 }
 
 #hero-text button{
-  color: pink;
+  color: #F8D5D4;
   background-color: black;
 }
 
@@ -123,4 +124,20 @@ button{
 
 #hero-text h2{
   font-size: 2rem;
+}
+
+footer{
+  border-top: 2px solid black;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFD2D2;
+}
+
+#socials{
+  display: flex;
+  gap: 10px;
 }
