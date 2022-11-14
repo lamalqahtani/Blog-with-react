@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  line-height: 25px;
 }
 nav{
   display: flex;
@@ -81,7 +82,10 @@ button{
 .post a{
   color: palevioletred;
 }
-
+.par-content{
+  width: 60%;
+  text-align: center;
+}
 #rabbit-char{
   position: relative;
   border-top: 2px solid black;
