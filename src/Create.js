@@ -35,7 +35,7 @@ const Create = () => {
                 <label>Title</label>
                 <input type='text' placeholder="insert a title" value={title} onChange={(e)=>setTitle(e.target.value)}/>
                 <label>Description </label>
-                <textarea value={description} onChange={(e)=>setDescription(e.target.value)}/>
+                <textarea value={description} placeholder="tell us something" onChange={(e)=>setDescription(e.target.value)}/>
                 <label>Author </label>
                 <select value={author} onChange={(e)=>setAuthor(e.target.value)}>
                     <option selected value="user 1">user 1</option>
